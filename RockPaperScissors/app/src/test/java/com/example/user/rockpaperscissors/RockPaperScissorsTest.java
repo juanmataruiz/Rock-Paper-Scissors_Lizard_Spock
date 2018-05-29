@@ -25,18 +25,40 @@ public class RockPaperScissorsTest {
     public void rockWins() {
         assertEquals(GameOutcome.COMPUTER, game.getWinner(MoveType.SCISSORS, MoveType.ROCK));
         assertEquals(GameOutcome.PLAYER_1, game.getWinner(MoveType.ROCK, MoveType.SCISSORS));
+        assertEquals(GameOutcome.COMPUTER, game.getWinner(MoveType.LIZARD, MoveType.ROCK));
+        assertEquals(GameOutcome.PLAYER_1, game.getWinner(MoveType.ROCK, MoveType.LIZARD));
     }
 
     @Test
     public void paperWins() {
         assertEquals(GameOutcome.COMPUTER, game.getWinner(MoveType.ROCK, MoveType.PAPER));
         assertEquals(GameOutcome.PLAYER_1, game.getWinner(MoveType.PAPER, MoveType.ROCK));
+        assertEquals(GameOutcome.COMPUTER, game.getWinner(MoveType.SPOCK, MoveType.PAPER));
+        assertEquals(GameOutcome.PLAYER_1, game.getWinner(MoveType.PAPER, MoveType.SPOCK));
     }
 
     @Test
     public void scissorsWins() {
         assertEquals(GameOutcome.COMPUTER, game.getWinner(MoveType.PAPER, MoveType.SCISSORS));
         assertEquals(GameOutcome.PLAYER_1, game.getWinner(MoveType.SCISSORS, MoveType.PAPER));
+        assertEquals(GameOutcome.COMPUTER, game.getWinner(MoveType.LIZARD, MoveType.SCISSORS));
+        assertEquals(GameOutcome.PLAYER_1, game.getWinner(MoveType.SCISSORS, MoveType.LIZARD));
+    }
+
+    @Test
+    public void lizardWins() {
+        assertEquals(GameOutcome.COMPUTER, game.getWinner(MoveType.PAPER, MoveType.LIZARD));
+        assertEquals(GameOutcome.PLAYER_1, game.getWinner(MoveType.LIZARD, MoveType.PAPER));
+        assertEquals(GameOutcome.COMPUTER, game.getWinner(MoveType.SPOCK, MoveType.LIZARD));
+        assertEquals(GameOutcome.PLAYER_1, game.getWinner(MoveType.LIZARD, MoveType.SPOCK));
+    }
+
+    @Test
+    public void spockWins() {
+        assertEquals(GameOutcome.COMPUTER, game.getWinner(MoveType.ROCK, MoveType.SPOCK));
+        assertEquals(GameOutcome.PLAYER_1, game.getWinner(MoveType.SPOCK, MoveType.ROCK));
+        assertEquals(GameOutcome.COMPUTER, game.getWinner(MoveType.SCISSORS, MoveType.SPOCK));
+        assertEquals(GameOutcome.PLAYER_1, game.getWinner(MoveType.SPOCK, MoveType.SCISSORS));
     }
 
     @Test

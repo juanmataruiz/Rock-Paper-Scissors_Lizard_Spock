@@ -24,8 +24,8 @@ public class RockPaperScissors {
 
     public GameOutcome getWinner(MoveType player_1, MoveType computer) {
         if (player_1 == computer) return GameOutcome.DRAW;
-        if (player_1.getWinsAgainst() == computer) {
-            return GameOutcome.PLAYER_1;
+        for (MoveType move : player_1.getWinsAgainst()) {
+            if (move == computer) return GameOutcome.PLAYER_1;
         }
         return GameOutcome.COMPUTER;
     }

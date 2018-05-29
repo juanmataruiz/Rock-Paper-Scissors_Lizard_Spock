@@ -1,61 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/rock_bttn"
+    <TextView
+        android:id="@+id/instructions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
-        android:text="Rock"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/result_console"
-        app:layout_constraintVertical_bias="0.007" />
-
-    <Button
-        android:id="@+id/paper_bttn"
-        android:layout_width="88dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:text="Paper"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/scissors_bttn"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toEndOf="@+id/rock_bttn"
-        app:layout_constraintTop_toBottomOf="@+id/result_console"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/scissors_bttn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="40dp"
-        android:text="Scissors"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/result_console"
-        app:layout_constraintVertical_bias="0.007" />
+        android:text="Please click a button to start playing:"
+        android:typeface="sans" />
 
     <TextView
         android:id="@+id/result_console"
-        android:layout_width="213dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -63,21 +25,44 @@
         android:layout_marginTop="60dp"
         android:textSize="14sp"
         android:textStyle="bold|italic"
-        app:fontFamily="serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instructions" />
+        />
 
-    <TextView
-        android:id="@+id/instructions"
-        android:layout_width="240dp"
-        android:layout_height="25dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:text="Please click a button to start playing:"
-        android:typeface="sans"
-        app:fontFamily="sans-serif"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="10dp" />
-</android.support.constraint.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/rock_bttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rock"
+        />
+
+    <Button
+        android:id="@+id/paper_bttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paper"
+         />
+
+    <Button
+        android:id="@+id/scissors_bttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scissors"
+         />
+
+
+    <Button
+        android:id="@+id/lizard_bttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Lizard"
+       />
+
+    <Button
+        android:id="@+id/spock_bttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spock"
+         />
+</LinearLayout>

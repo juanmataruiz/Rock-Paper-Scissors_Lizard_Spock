@@ -11,6 +11,8 @@ public class MainActivity extends AppCompatActivity {
     Button rockBttn;
     Button paperBttn;
     Button scissorsBttn;
+    Button spockBttn;
+    Button lizardBttn;
     TextView resultConsole;
     RockPaperScissors rockPaperScissors;
 
@@ -22,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         rockBttn = findViewById(R.id.rock_bttn);
         paperBttn = findViewById(R.id.paper_bttn);
         scissorsBttn = findViewById(R.id.scissors_bttn);
+        spockBttn = findViewById(R.id.spock_bttn);
+        lizardBttn = findViewById(R.id.lizard_bttn);
         resultConsole = findViewById(R.id.result_console);
         rockPaperScissors = new RockPaperScissors();
         rockBttn.setOnClickListener(new View.OnClickListener() {
@@ -42,6 +46,19 @@ public class MainActivity extends AppCompatActivity {
                 play(MoveType.SCISSORS);
             }
         });
+        spockBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                play(MoveType.SPOCK);
+            }
+        });
+        lizardBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                play(MoveType.LIZARD);
+            }
+        });
+
 
     }
 
