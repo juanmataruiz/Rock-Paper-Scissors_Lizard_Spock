@@ -2,17 +2,26 @@ package com.example.user.rockpaperscissors;
 
 public enum MoveType {
 
-    ROCK(MoveType.SCISSORS),
-    PAPER(MoveType.ROCK),
-    SCISSORS(MoveType.PAPER);
+    ROCK("SCISSORS"),
+    PAPER("ROCK"),
+    SCISSORS("PAPER");
 
-    private MoveType winsAgainst;
+    private String winsAgainst;
 
-    MoveType(MoveType moveType) {
-        this.winsAgainst = moveType;
+    MoveType(String moveString) {
+        this.winsAgainst = moveString;
     }
 
     public MoveType getWinsAgainst() {
-        return winsAgainst;
+        switch (winsAgainst){
+            case "SCISSORS":
+                return MoveType.SCISSORS;
+            case "PAPER":
+                return MoveType.PAPER;
+            case "ROCK":
+                return MoveType.ROCK;
+            default:
+                return MoveType.ROCK;
+        }
     }
 }
