@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,6 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Please click a button to start playing:"
+        android:textColor="@android:color/holo_orange_dark"
+        android:layout_marginTop="8dp"
         android:typeface="sans" />
 
     <TextView
@@ -25,7 +28,9 @@
         android:layout_marginTop="60dp"
         android:textSize="14sp"
         android:textStyle="bold|italic"
-        />
+        android:textColor="@android:color/background_dark"
+        android:layout_marginBottom="20dp"
+        app:fontFamily="@font/allerta_stencil" />
 
 
 
@@ -34,6 +39,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Rock"
+        android:background="@android:color/holo_blue_bright"
+        android:textColor="@android:color/background_light"
+        android:layout_marginBottom="4dp"
         />
 
     <Button
@@ -41,6 +49,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Paper"
+        android:background="@android:color/holo_blue_bright"
+        android:textColor="@android:color/background_light"
+        android:layout_marginBottom="4dp"
          />
 
     <Button
@@ -48,6 +59,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Scissors"
+        android:background="@android:color/holo_blue_bright"
+        android:textColor="@android:color/background_light"
+        android:layout_marginBottom="4dp"
          />
 
 
@@ -55,8 +69,10 @@
         android:id="@+id/lizard_bttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:text="Lizard"
+        android:background="@android:color/holo_blue_bright"
+        android:textColor="@android:color/background_light"
+        android:layout_marginBottom="4dp"
        />
 
     <Button
@@ -64,5 +80,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Spock"
+        android:background="@android:color/holo_blue_bright"
+        android:textColor="@android:color/background_light"
          />
 </LinearLayout>
