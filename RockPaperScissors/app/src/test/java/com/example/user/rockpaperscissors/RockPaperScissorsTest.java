@@ -43,7 +43,7 @@ public class RockPaperScissorsTest {
     public void canDraw() {
         assertEquals(GameOutcome.DRAW, game.getWinner(MoveType.PAPER, MoveType.PAPER));
     }
-    
+
 
 
 
