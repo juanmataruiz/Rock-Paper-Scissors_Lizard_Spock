@@ -44,6 +44,42 @@ public class RockPaperScissorsTest {
         assertEquals(GameOutcome.DRAW, game.getWinner(MoveType.PAPER, MoveType.PAPER));
     }
 
+    @Test
+    public void canGetPlayersWins() {
+        assertEquals(0, game.getPlayerWins());
+    }
+
+    @Test
+    public void canGetComputerWins() {
+        assertEquals(0, game.getComputerWins());
+    }
+
+    @Test
+    public void canGetDraws() {
+        assertEquals(0, game.getDraws());
+    }
+
+    @Test
+    public void gameCanAddWin__Player() {
+        game.recordOutcome(GameOutcome.PLAYER_1);
+        assertEquals(1, game.getPlayerWins());
+    }
+
+    @Test
+    public void gameCanAddWin__Computer() {
+        game.recordOutcome(GameOutcome.COMPUTER);
+        assertEquals(1, game.getComputerWins());
+    }
+
+    @Test
+    public void gameCanAddDraw() {
+        game.recordOutcome(GameOutcome.DRAW);
+        assertEquals(1, game.getDraws());
+    }
+
+
+
+
 
 
 

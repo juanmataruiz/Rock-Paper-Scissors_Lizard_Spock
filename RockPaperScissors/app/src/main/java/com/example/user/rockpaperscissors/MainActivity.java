@@ -48,28 +48,44 @@ public class MainActivity extends AppCompatActivity {
     public void play(MoveType playerChoice) {
        MoveType computerChoice = rockPaperScissors.getGuess();
        GameOutcome result = rockPaperScissors.getWinner(playerChoice, computerChoice);
+       rockPaperScissors.recordOutcome(result);
        displayResult(playerChoice, computerChoice, result);
     }
 
     public void displayResult(MoveType playerChoice, MoveType computerChoice, GameOutcome result) {
         resultConsole.setText("");
         StringBuilder sb = new StringBuilder();
+
+        sb.append("Player wins: ");
+        sb.append(rockPaperScissors.getPlayerWins());
+        sb.append("\n");
+
+        sb.append("Computer wins: ");
+        sb.append(rockPaperScissors.getComputerWins());
+        sb.append("\n");
+
+        sb.append("Draws: ");
+        sb.append(rockPaperScissors.getDraws());
+        sb.append("\n\n");
+
+
         sb.append("Player chose: ");
         sb.append(playerChoice.toString().toLowerCase());
         sb.append("\n");
+
         sb.append("Computer chose: ");
         sb.append(computerChoice.toString().toLowerCase());
         sb.append("\n");
 
         switch (result) {
             case PLAYER_1:
-                sb.append("Congrats you win");
+                sb.append("Congrats you win!");
                 break;
             case DRAW:
-                sb.append("It has been a draw");
+                sb.append("It has been a draw!");
                 break;
             case COMPUTER:
-                sb.append("Sorry, computer won this time");
+                sb.append("Sorry, computer won this time.");
         }
 
         resultConsole.setText(sb.toString());
